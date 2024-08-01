@@ -868,7 +868,7 @@ figcaption {
 .button.is-alternate.is-link.is-icon.is-footer {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-  color: var(--base-color-brand--secondary-white);
+  color: var(--base-color-brand--secondary-white); 
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
@@ -1990,7 +1990,7 @@ figcaption {
   bottom: auto;
   left: 0%;
   right: 0%;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, .1);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0);
 }
 
 .navbar_container {
