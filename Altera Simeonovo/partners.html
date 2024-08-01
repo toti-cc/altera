@@ -221,6 +221,9 @@ section, header, footer {
   height: 2.33rem;
   border-radius: 0%;
 }
+.menu-icon_line-top, .menu-icon_line-middle, .menu-icon_line-bottom {
+  background-color: black;
+}
 </style>
       <style>
 /*width*/
@@ -277,11 +280,11 @@ border-radius:40px;
               </svg></div>
           </a>
           <nav role="navigation" class="navbar2_menu is-page-height-tablet w-nav-menu">
-            <a href="#" class="navbar_link w-nav-link">За имота</a>
-            <a href="#" class="navbar_link w-nav-link">Предимства</a>
-            <a href="#" class="navbar_link w-nav-link">Локация</a>
+            <a href="index.html#section-za-imota" class="navbar_link w-nav-link">За имота</a>
+            <a href="index.html#section-benefits" class="navbar_link w-nav-link">Предимства</a>
+            <a href="index.html#section-location" class="navbar_link w-nav-link">Локация</a>
             <a href="partners.html" aria-current="page" class="navbar_link w-nav-link w--current">Партньори</a>
-            <a href="#" class="navbar_link w-nav-link">За нас</a>
+            <a href="index.html#section-about-us" class="navbar_link w-nav-link">За нас</a>
             <div class="navbar2_button-wrapper-inner hide-desktop">
               <a blocks-name="footer1_social-link" href="#" class="button is-alternate is-link is-icon is-nav w-inline-block">
                 <div class="icon-embed-nav-link w-embed"><svg width="17" height="17" viewbox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -528,7 +531,7 @@ border-radius:40px;
 updateYear()
 </script>
   <script>
- /* $(window).scroll(function() {
+  $(window).scroll(function() {
     if ($(this).scrollTop() > 30) {
       $('.navbar_component').css('background-color', 'var(--base-color-brand--white)');
     } else {
