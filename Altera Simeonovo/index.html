@@ -565,13 +565,13 @@ a,
                   </svg></div>
                 <div>359 896 890 662</div>
               </a>
-              <a href="#" class="button-2 is-navbar-button w-button">Направи запитване</a>
+              <a href="#" class="button-2 is-navbar-button max-width-full-mobile-portrait w-button">Направете запитване</a>
             </div>
           </nav>
           <div class="navbar2_button-wrapper">
             <div class="navbar2_button-wrapper-inner">
               <a blocks-name="footer1_social-link" href="tel:+359896890662"
-                class="button is-alternate is-link is-icon is-nav is-2 w-inline-block">
+                class="button is-alternate is-link is-icon is-nav w-inline-block">
                 <div class="icon-embed-nav-link w-embed"><svg width="17" height="17" viewbox="0 0 17 17" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -580,7 +580,7 @@ a,
                   </svg></div>
                 <div id="nav-number">+359 896 890 662</div>
               </a>
-              <a href="#contact" class="button-2 is-navbar-button w-button">Направи запитване</a>
+              <a href="#contact" class="button-2 is-navbar-button max-width-full-mobile-portrait w-button">Направете запитване</a>
             </div>
             <div class="navbar2_menu-button w-nav-button">
               <div class="menu-icon">
@@ -1410,10 +1410,12 @@ a,
                           loading="lazy" class="layout-tabs_image"></div>
                       <div id="w-node-b1d05cb7-86f4-6484-26a3-1917f6930b97-d95be44e" class="layout-tabs_tab-content">
                         <div class="layout-tabs_richtext w-richtext">
-                          <p>Сърцето на дома е разположено на партера, където голяма дневна с трапезария ви канят да се
-                            насладите на уютна атмосфера, за събирания с близките ви хора.</p>
-                          <p>От модерната кухня, през антрето, което посреща гостите, до веранда с гледка към градината
-                            – всеки детайл в този дом е внимателно обмислен.</p>
+                          <p>Първият етаж е посветен на уединението и спокойствието. Тук са разположени три уютни
+                            спални, всяка със собствена баня и тоалетна за максимален комфорт.
+                            Една от спалните разполага с просторен дрешник, за да осигури достатъчно място за съхранение
+                            на личните ви вещи.</p>
+                          <p>Това е идеалното място за вас или вашите гости, където можете да се оттеглите за заслужена
+                            почивка далеч от шума и суетата.</p>
                         </div>
                       </div>
                     </div>
@@ -1447,9 +1449,8 @@ a,
                   <h2 blocks-name="heading">Партньор с<br>10+ години опит</h2>
                 </div>
                 <p blocks-name="paragraph" id="w-node-e8c9ce93-3f02-95ea-8850-0b2155fdc0cb-d95be44e"
-                  class="max-width-50ch is-tablet-none">Домът е крепост, където се пазят най-ценните спомени. С екип от
-                  специалисти превръщаме мечтите ви в реалност – от скицата до ключа. Всяка сграда от нашето портфолио е
-                  изградена от висококачествени и устойчиви материали на водещи производители.</p>
+                  class="max-width-50ch is-tablet-none">Превръщаме вашите мечти в реалност с висококачествени материали
+                  от лидери в индустрията – от първата скица до получаването на ключа за вашия дом.</p>
                 <div class="layout-cards_content">
                   <div class="layout-cards_image-wrapper"><img src="images/vitosha_1.avif" loading="lazy"
                       sizes="(max-width: 991px) 90vw, (max-width: 1919px) 44vw, 630.0000610351562px"
@@ -1505,10 +1506,10 @@ a,
                         data-name="Име и фамилия" placeholder="Иван Георгиев" type="text" id="field" required=""></div>
                     <div class="form_field-wrapper"><label for="field-2" class="form_field-label">Имейл</label><input
                         class="form_input w-input" maxlength="256" name="field" data-name="Имейл"
-                        placeholder="yourmail@gmail.com" type="email" id="field-2"></div>
+                        placeholder="building@alterahome.eu" type="email" id="field-2"></div>
                     <div id="w-node-_2c5a466e-4a65-754d-ab32-eaebe641157e-e641156c" class="form_field-wrapper"><label
                         for="field-3" class="form_field-label">Телефон*</label><input class="form_input w-input"
-                        maxlength="256" name="field" data-name="Телефон" placeholder="0812345678" type="tel"
+                        maxlength="256" name="field" data-name="Телефон" placeholder="0896890662" type="tel"
                         id="field-3" required=""></div>
                     <div class="form_field-wrapper"><label for="field-4"
                         class="form_field-label">Съобщение</label><textarea id="field-4" name="field" maxlength="5000"
@@ -1644,7 +1645,8 @@ a,
               <div class="gradient-line is-footer"></div>
               <div class="padding-top padding-medium">
                 <div class="footer3_bottom-wrapper">
-                  <div class="footer1_credit-text">© <span id='year'>2024</span> Altera Home | Всички права запазени.</div>
+                  <div class="footer1_credit-text">© <span id='year'>2024</span> Altera Home | Всички права запазени.
+                  </div>
                   <div class="footer1_credit-text">Дизайн и изработка: <a href="https://creativecorner.studio/"
                       target="_blank" class="footer1_credit-text is-link">Creative Corner Studio</a>
                   </div>
@@ -1697,6 +1699,19 @@ a,
     updateYear()
   </script>
   <script>
+const colorHover = 'var(--base-color-brand--white)';
+
+    document.querySelectorAll(".button.is-link")
+        .forEach((element) => {
+          element.addEventListener('mouseover', () => {
+            element.style.color = 'var(--base-color-brand--green-brand)';
+          });
+
+          element.addEventListener('mouseout', () => {
+            element.style.color = colorHover;
+          });
+        });
+
     $(window).scroll(function () {
       if ($(window).width() > 992) {
         if ($(this).scrollTop() > 100) {
@@ -1705,12 +1720,16 @@ a,
           $('.navbar_link').css('color', 'var(--base-color-brand--dark-green-secondary)');
           $('#nav-number').css('color', 'var(--base-color-brand--dark-green-secondary)');
           $('.is-navbar-button').css('color', 'var(--base-color-brand--dark-green-secondary)');
+          $('.navbar_component').css('box-shadow', '0 10px 50px rgba(0, 0, 0, .1)');
+          colorHover = 'var(--base-color-brand--dark-green-secondary)';
         } else {
           $('.navbar_component').css('background-color', 'var(--base-color-neutral--transperant)');
           $('.navbar_logo-link').css('color', 'var(--base-color-brand--white)');
           $('.navbar_link').css('color', 'var(--base-color-brand--secondary-white)');
           $('#nav-number').css('color', 'var(--base-color-brand--secondary-white)');
           $('.is-navbar-button').css('color', 'var(--base-color-brand--white)');
+          $('.navbar_component').css('box-shadow', '0 10px 50px rgba(0, 0, 0, 0)');
+          colorHover = 'var(--base-color-brand--secondary-white)';
         }
       } else {
         if ($(this).scrollTop() > 100) {
@@ -1725,6 +1744,7 @@ a,
           $('.menu-icon_line-top').css('background-color', 'var(--base-color-brand--white)');
           $('.menu-icon_line-middle').css('background-color', 'var(--base-color-brand--white)');
           $('.menu-icon_line-bottom').css('background-color', 'var(--base-color-brand--white)');
+          $('.navbar_component').css('box-shadow', '0 10px 50px rgba(0, 0, 0, 0)');
         }
       }
     });
