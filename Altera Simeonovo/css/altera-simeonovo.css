@@ -6948,8 +6948,7 @@ figcaption {
   .layout-tabs_tabs-menu {
     width: 100vw;
     margin-bottom: 3rem;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-right: 10vw;
   }
 
   .layout-tabs_tabs-menu.no-scrollbar {

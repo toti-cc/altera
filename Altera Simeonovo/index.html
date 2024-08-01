@@ -243,6 +243,9 @@
   </style>
   <!--  [Attributes by Finsweet] CMS Filter  -->
   <script async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js"></script>
+
+  <!-- [Attributes by Finsweet] Disable scrolling -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js"></script>
 </head>
 
 <body>
@@ -549,13 +552,13 @@ a,
               </svg></div>
           </a>
           <nav role="navigation" class="navbar2_menu is-page-height-tablet w-nav-menu">
-            <a href="index.html#section-za-imota" class="navbar_link w-nav-link">За имота</a>
-            <a href="index.html#section-benefits" class="navbar_link w-nav-link">Предимства</a>
-            <a href="index.html#section-location" class="navbar_link w-nav-link">Локация</a>
+            <a href="#section-za-imota" class="navbar_link w-nav-link">За имота</a>
+            <a href="#section-benefits" class="navbar_link w-nav-link">Предимства</a>
+            <a href="#section-location" class="navbar_link w-nav-link">Локация</a>
             <a href="partners.html" aria-current="page" class="navbar_link w-nav-link">Партньори</a>
-            <a href="index.html#section-about-us" class="navbar_link w-nav-link">За нас</a>
+            <a href="#section-about-us" class="navbar_link w-nav-link">За нас</a>
             <div class="navbar2_button-wrapper-inner hide-desktop">
-              <a blocks-name="footer1_social-link" href="#"
+              <a blocks-name="footer1_social-link" href="#contact"
                 class="button is-alternate is-link is-icon is-nav w-inline-block" id="textlinknav">
                 <div class="icon-embed-nav-link w-embed"><svg width="17" height="17" viewbox="0 0 17 17" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -565,7 +568,7 @@ a,
                   </svg></div>
                 <div>359 896 890 662</div>
               </a>
-              <a href="#" class="button-2 is-navbar-button max-width-full-mobile-portrait w-button">Направете
+              <a href="#contact" class="button-2 is-navbar-button max-width-full-mobile-portrait w-button">Направете
                 запитване</a>
             </div>
           </nav>
@@ -925,7 +928,7 @@ a,
                       </a>
                       <div data-lenis-prevent="" data-w-id="ff119b37-df07-f427-c1c3-5200c0181b4d"
                         class="filters_filters-modal">
-                        <div class="filters_filter-group-list">
+                        <div class="filters_filter-group-list" fs-scrolldisable-element="when-visible">
                           <div class="filters6_filter-group">
                             <div class="filters6_filter-group-heading">
                               <div>Видове локации</div>
@@ -1703,18 +1706,6 @@ a,
   <script>
     let colorHover = 'var(--base-color-brand--white)';
 
-    document.querySelectorAll("#nav-number")
-      .forEach((element) => {
-        element.addEventListener('mouseover', () => {
-          element.style.color = 'var(--base-color-brand--green-brand)';
-          console.log(colorHover)
-        });
-
-        element.addEventListener('mouseout', () => {
-          element.style.color = colorHover;
-        });
-      });
-
     document.querySelectorAll(".button-2.is-navbar-button")
       .forEach((element) => {
         element.addEventListener('mouseover', () => {
@@ -1735,7 +1726,22 @@ a,
           $('.navbar_logo-link').css('color', 'var(--base-color-brand--dark-green-primary)');
           $('.navbar_link').css('color', 'var(--base-color-brand--dark-green-secondary)');
           $('#nav-number').css('color', 'var(--base-color-brand--dark-green-secondary)');
-          //$('#nav-number').css('color', 'var(--base-color-brand--dark-green-secondary)');
+          $('#nav-number').hover(
+            function () {
+              $(this).css('color', 'var(--base-color-brand--green-brand)');
+            },
+            function () {
+              $(this).css('color', 'var(--base-color-brand--dark-green-secondary)');
+            }
+          );
+          $('.is-navbar-button').hover(
+            function () {
+              $(this).css('color', 'var(--base-color-brand--white)');
+            },
+            function () {
+              $(this).css('color', 'var(--base-color-brand--dark-green-secondary)');
+            }
+          );
           $('.is-navbar-button').css('color', 'var(--base-color-brand--dark-green-secondary)');
           $('.navbar_component').css('box-shadow', '0 10px 50px rgba(0, 0, 0, .1)');
           colorHover = 'var(--base-color-brand--dark-green-secondary)';
@@ -1744,6 +1750,22 @@ a,
           $('.navbar_logo-link').css('color', 'var(--base-color-brand--white)');
           $('.navbar_link').css('color', 'var(--base-color-brand--secondary-white)');
           $('#nav-number').css('color', 'var(--base-color-brand--secondary-white)');
+          $('#nav-number').hover(
+            function () {
+              $(this).css('color', 'var(--base-color-brand--green-brand)');
+            },
+            function () {
+              $(this).css('color', 'var(--base-color-brand--secondary-white)');
+            }
+          );
+          $('.is-navbar-button').hover(
+            function () {
+              $(this).css('color', 'var(--base-color-brand--white)');
+            },
+            function () {
+              $(this).css('color', 'var(--base-color-brand--white)');
+            }
+          );
           //$('#nav-number').css('color', 'var(--base-color-brand--secondary-white)');
           $('.is-navbar-button').css('color', 'var(--base-color-brand--white)');
           $('.navbar_component').css('box-shadow', '0 10px 50px rgba(0, 0, 0, 0)');
@@ -1769,6 +1791,13 @@ a,
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      document
+        .querySelectorAll(".filters_button-wrapper")
+        .forEach((element) => {
+          element.addEventListener('click', () => {
+            closeModal();
+          });
+        });
       document
         .querySelectorAll(".location_close")
         .forEach((element) => {
