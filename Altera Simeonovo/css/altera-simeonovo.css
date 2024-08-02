@@ -881,10 +881,13 @@ figcaption {
   color: var(--base-color-brand--white);
   padding-left: .5rem;
   padding-right: .5rem;
+  border-bottom: solid 1px transparent;
+  border-radius: 0%;
 }
 
 .button.is-alternate.is-link.is-icon.is-nav:hover {
   color: var(--base-color-brand--green-brand);
+  border-bottom: solid 1px var(--base-color-brand--green-brand);;
 }
 
 .button.is-tertiary {
@@ -5207,7 +5210,7 @@ figcaption {
 }
 
 .button-2.is-navbar-button:hover {
-  background-color: #388661;
+  background-color: rgba(17, 97, 59, 0.2);
 }
 
 .gradient-line-2 {
